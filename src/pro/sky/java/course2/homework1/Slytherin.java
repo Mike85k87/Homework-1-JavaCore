@@ -1,6 +1,6 @@
 package pro.sky.java.course2.homework1;
 
-class Slytherin extends Student {
+class Slytherin extends Hogwarts {
     private int cunning;
     private int determination;
     private int ambition;
@@ -66,16 +66,16 @@ class Slytherin extends Student {
         System.out.println("Находчивость: " + resourcefulness);
         System.out.println("Жажда власти: " + thirstForPower);
     }
-    public void compareWith(Slytherin student1, Slytherin student2) {
-        int sum1 = student1.cunning + student1.determination + student1.ambition;
-        int sum2 = student2.cunning + student2.determination + student2.ambition;
+    public void compareWith(Slytherin student) {
+        int sum1 = student.cunning + student.determination + student.ambition;
+        int sum2 = this.cunning + this.determination + this.ambition;
 
         if (sum1 > sum2) {
-            System.out.println(student1.name + " является лучшим учеником Слизерина.");
+            System.out.println(student.getName() + " является лучшим учеником Слизерина.");
         } else if (sum1 < sum2) {
-            System.out.println(student2.name + " является лучшим учеником Слизерина.");
+            System.out.println(this.getName() + " является лучшим учеником Слизерина.");
         } else {
-            System.out.println("У " + student1.name + " и " + student2.name + " одинаковая сумма свойств Слизерина.");
+            System.out.println("У " + student.getName() + " и " + this.getName() + " одинаковая сумма свойств Слизерина.");
         }
     }
 }

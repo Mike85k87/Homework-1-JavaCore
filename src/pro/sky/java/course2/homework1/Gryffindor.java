@@ -1,6 +1,6 @@
 package pro.sky.java.course2.homework1;
 
-class Gryffindor extends Student {
+class Gryffindor extends Hogwarts {
     private int nobility;
     private int honor;
     private int bravery;
@@ -43,16 +43,16 @@ class Gryffindor extends Student {
         System.out.println("Храбрость: " + bravery);
 
     }
-    public void compareWith(Gryffindor student1, Gryffindor student2) {
-        int sum1 = student1.nobility + student1.honor + student1.bravery;
-        int sum2 = student2.nobility + student2.honor + student2.bravery;
+    public void compareWith(Gryffindor student) {
+        int sum1 = student.nobility + student.honor + student.bravery;
+        int sum2 = this.nobility + this.honor + this.bravery;
 
         if (sum1 > sum2) {
-            System.out.println(student1.name + " является лучшим учеником Гриффиндора.");
+            System.out.println(student.getName() + " является лучшим учеником Гриффиндора.");
         } else if (sum1 < sum2) {
-            System.out.println(student2.name + " является лучшим учеником Гриффиндора.");
+            System.out.println(this.getName() + " является лучшим учеником Гриффиндора.");
         } else {
-            System.out.println("У " + student1.name + " и " + student2.name + " одинаковая сумма свойств Гриффиндора.");
+            System.out.println("У " + student.getName() + " и " + this.getName() + " одинаковая сумма свойств Гриффиндора.");
         }
     }
 }

@@ -1,6 +1,6 @@
 package pro.sky.java.course2.homework1;
 
-public class Ravenclaw extends Student {
+public class Ravenclaw extends Hogwarts {
     private int intelligence;
     private int wisdom;
     private int wit;
@@ -53,15 +53,15 @@ public class Ravenclaw extends Student {
         System.out.println("Мудрость: " + wisdom);
         System.out.println("Остроумие: " + wit);
     }
-    public void compareWith(Ravenclaw student1, Ravenclaw student2) {
-        int sum1 = student1.intelligence + student1.wisdom + student1.wit;
-        int sum2 = student2.intelligence + student2.wisdom + student2.wit;
+    public void compareWith(Ravenclaw student) {
+        int sum1 = student.intelligence + student.wisdom + student.wit;
+        int sum2 = this.intelligence + this.wisdom + this.wit;
         if (sum1 > sum2) {
-            System.out.println(student1.name + " является лучшим учеником Когтеврана.");
+            System.out.println(student.getName() + " является лучшим учеником Когтеврана.");
         } else if (sum1 < sum2) {
-            System.out.println(student2.name + " является лучшим учеником Когтеврана.");
+            System.out.println(this.getName() + " является лучшим учеником Когтеврана.");
         } else {
-            System.out.println("У " + student1.name + " и " + student2.name + " одинаковая сумма свойств Когтеврана.");
+            System.out.println("У " + student.getName() + " и " + this.getName() + " одинаковая сумма свойств Когтеврана.");
         }
     }
 

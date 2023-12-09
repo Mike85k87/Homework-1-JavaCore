@@ -1,7 +1,45 @@
 package pro.sky.java.course2.homework1;
 
 public class Hogwarts {
-    public static void compareStudents(Student student1, Student student2) {
+    private String name;
+    private String surname;
+    private int magic;
+    private int teleportation;
+    public Hogwarts(String name, String surname, int magic, int teleportation) {
+        this.name = name;
+        this.surname = surname;
+        this.magic = magic;
+        this.teleportation = teleportation;
+    }
+    public String getName() {
+        return name;
+    }
+    public void setName(String name) {
+        this.name = name;
+    }
+    public String getSurname() {
+        return surname;
+    }
+    public void setSurname(String surname) {
+        this.surname = surname;
+    }
+    public int getMagic() {
+        return magic;
+    }
+    public void setMagic(int magic) {
+        this.magic = magic;
+    }
+    public int getTeleportation() {
+        return teleportation;
+    }
+    public void setTeleportation(int teleportation) {
+        this.teleportation = teleportation;
+    }
+    public void printPeople() {
+        System.out.println("Ученик: " + getName() + " " + getSurname());
+        System.out.println("Магия: " + getMagic() + ", телепортация: " + getTeleportation());
+    }
+    public static void compareStudents(Hogwarts student1, Hogwarts student2) {
         int magicalPower1 = student1.getMagic();
         int magicalPower2 = student2.getMagic();
 
@@ -25,7 +63,7 @@ public class Hogwarts {
         }
     }
     public static void main(String[] args) {
-        Gryffindor harryPotter = new Gryffindor("Гарри",  "Поттер", 10, 23, 45, 75, 5);
+        Gryffindor harryPotter = new Gryffindor("Гарри",  "Поттер", 10, 23, 45, 75, 95);
         Gryffindor hermioneGranger = new Gryffindor("Гермиона", "Грейнджер", 55, 22, 15, 93, 80);
         Gryffindor ronWeasley = new Gryffindor("Рон" ,"Уизли", 76, 2, 10, 65, 85);
 
@@ -42,13 +80,13 @@ public class Hogwarts {
         Ravenclaw marcusBelby = new Ravenclaw("Маркус"," Белби", 8, 78, 88, 75, 31,11);
 
         harryPotter.printPeople();
-        harryPotter.compareWith(hermioneGranger, ronWeasley);
+        harryPotter.compareWith(hermioneGranger);
         dracoMalfoy.printPeople();
-        gregoryGoyle.compareWith(grahamMontague,gregoryGoyle);
+        gregoryGoyle.compareWith(grahamMontague);
         zachariasSmith.printPeople();
-        cedricDiggory.compareWith(cedricDiggory,justinFinchFletchley);
+        cedricDiggory.compareWith(justinFinchFletchley);
         choChang.printPeople();
-        padmaPatil.compareWith(padmaPatil, marcusBelby);
+        padmaPatil.compareWith(marcusBelby);
         compareStudents(justinFinchFletchley,grahamMontague);
     }
 }
